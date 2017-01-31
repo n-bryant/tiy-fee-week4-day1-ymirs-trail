@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TIY - Ymir's Trail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Ymir's Trail</h1>
+    </header>
+    <main>
+      <h2 class="day">Day: 1</h2>
+      <section class="vis-container">
+        <div class="container wagon">
+          <div class="wagon-info">
+            <div class="food-total"></div>
+            <div class="health-total">
+              <span>These party members are sick:</span>
+              <ul class="sick-members"></ul>
+            </div>
+          </div>
+        </div>
+        <button class="container start">start</button>
+        <div class="container monster">
+          <img src="images/monster.jpg">
+        </div>
+      </section>
+      <section class="hud-container">
+        <div class="party-info">
+          <h2>party</h2>
+          <ul class="party">
+          </ul>
+          <div class="actions-container">
+            <button class="add-member">add member</button>
+            <button class="check-food">Check Food</button>
+            <button class="check-health">Check Health</button>
+          </div>
+        </div>
+        <button class="next-day">next day</button>
+      </section>
+    </main>
+    <script type="text/javascript" src="scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+.hud-container {
+  align-items: center;
+  display: flex;
+  height: 0;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  opacity: 0;
+
+  &.show {
+    height: 500px;
+    transition: all 2s ease;
+    opacity: 1;
+  }
+}
+
+.party-info {
+  background: rgba(136, 147, 167, .75);
+  height: 450px;
+  margin-top: 1rem;
+  width: 50%;
+
+  .party {
+    margin: 1rem auto .5rem auto;
+    width: 100%;
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 1rem;
+
+      span {
+        margin-right: 10px;
+      }
+
+      button {
+        background: $snow;
+        border-radius: 5px;
+        display: block;
+        margin-right: 5px;
+        width: 25%;
+
+        &:hover {
+          cursor: pointer;
+        }
+        &:active {
+          background: $midnight;
+        }
+      }
+    }
+  }
+}
+
+.actions-container {
+  bottom: 4rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+
+  button {
+    background: $water;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:active {
+      background: $midnight;
+    }
+  }
+}
+
+.next-day {
+  background: $snow;
+  margin: 0 auto 1rem auto;
+  width: 50%;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background: $midnight;
+  }
+}

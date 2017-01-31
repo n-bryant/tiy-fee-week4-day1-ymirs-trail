@@ -1,0 +1,67 @@
+body {
+  color: $snow;
+  font: 16px/1.6 $primaryFont;
+}
+
+h1 {
+  color: $water;
+  font: 3rem $secondaryFont;
+  text-decoration: underline;
+}
+
+.day {
+  color: $midnight;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.start {
+  color: $midnight;
+  font: 2rem $primaryFont;
+  font-weight: 800;
+
+  &:active {
+    color: $snow;
+  }
+}
+
+.hud-container {
+  h2 {
+    color: $midnight;
+    font-size: 2rem;
+    text-decoration: underline;
+  }
+}
+
+.actions-container {
+  button {
+    color: $midnight;
+    font: 1rem $primaryFont;
+
+    &:active {
+      color: $snow;
+    }
+  }
+}
+
+.eat {
+  color: $midnight;
+  font: 1rem $primaryFont;
+
+  &:active {
+    color: $snow;
+  }
+}
+
+.hunt {
+  @extend .eat;
+}
+
+.next-day {
+  color: $midnight;
+  font: 1.5rem $primaryFont;
+
+  &:active {
+    color: $snow;
+  }
+}

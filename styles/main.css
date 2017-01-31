@@ -1,0 +1,249 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  width: 100%; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  color: #F1EBED;
+  font: 16px/1.6 "Cinzel", serif; }
+
+h1 {
+  color: #5C718E;
+  font: 3rem "Cinzel Decorative", cursive;
+  text-decoration: underline; }
+
+.day {
+  color: #1F1E24;
+  font-size: 1.5rem;
+  text-align: center; }
+
+.start {
+  color: #1F1E24;
+  font: 2rem "Cinzel", serif;
+  font-weight: 800; }
+  .start:active {
+    color: #F1EBED; }
+
+.hud-container h2 {
+  color: #1F1E24;
+  font-size: 2rem;
+  text-decoration: underline; }
+
+.actions-container button {
+  color: #1F1E24;
+  font: 1rem "Cinzel", serif; }
+  .actions-container button:active {
+    color: #F1EBED; }
+
+.eat, .hunt {
+  color: #1F1E24;
+  font: 1rem "Cinzel", serif; }
+  .eat:active, .hunt:active {
+    color: #F1EBED; }
+
+.next-day {
+  color: #1F1E24;
+  font: 1.5rem "Cinzel", serif; }
+  .next-day:active {
+    color: #F1EBED; }
+
+body {
+  background: #1F1E24; }
+  body header {
+    margin-top: 1rem;
+    text-align: center; }
+
+.day {
+  margin-top: .5rem; }
+
+main {
+  background-image: url(../images/mountain-vista.jpg);
+  background-size: cover;
+  border: 4px double #5C718E;
+  margin: 0 auto;
+  width: 85%; }
+
+.vis-container {
+  justify-content: space-between;
+  display: flex;
+  padding: 1rem;
+  width: 100%; }
+
+.container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #5C718E;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  width: 33%; }
+  .container.wagon {
+    animation: right 2s ease; }
+  .container.monster {
+    animation: left 2s ease; }
+
+.wagon {
+  background: url(../images/wagon.jpg) #5C718E;
+  background-blend-mode: overlay;
+  background-size: cover; }
+  .wagon.chase {
+    width: 50%;
+    transform: translateX(50%);
+    transition: all 1s ease; }
+
+.wagon-info div {
+  display: none; }
+  .wagon-info div.is-active {
+    display: block; }
+
+.start {
+  animation: up 2s ease;
+  background: #8893A7;
+  border: 4px double #5C718E;
+  border-radius: 25px;
+  height: 4rem;
+  transform: translateY(75%); }
+  .start.vanish {
+    display: none; }
+  .start:hover {
+    cursor: pointer; }
+  .start:active {
+    background: #1F1E24; }
+
+.monster {
+  opacity: 1; }
+  .monster.chase {
+    opacity: 0;
+    transform: translateX(150%);
+    transition: all 1s ease; }
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(250%); }
+  100% {
+    opacity: 1; } }
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%); }
+  100% {
+    opacity: 1; } }
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(150%); }
+  100% {
+    opacity: 1; } }
+.hud-container {
+  align-items: center;
+  display: flex;
+  height: 0;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  opacity: 0; }
+  .hud-container.show {
+    height: 500px;
+    transition: all 2s ease;
+    opacity: 1; }
+
+.party-info {
+  background: rgba(136, 147, 167, 0.75);
+  height: 450px;
+  margin-top: 1rem;
+  width: 50%; }
+  .party-info .party {
+    margin: 1rem auto .5rem auto;
+    width: 100%; }
+    .party-info .party li {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 1rem; }
+      .party-info .party li span {
+        margin-right: 10px; }
+      .party-info .party li button {
+        background: #F1EBED;
+        border-radius: 5px;
+        display: block;
+        margin-right: 5px;
+        width: 25%; }
+        .party-info .party li button:hover {
+          cursor: pointer; }
+        .party-info .party li button:active {
+          background: #1F1E24; }
+
+.actions-container {
+  bottom: 4rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%); }
+  .actions-container button {
+    background: #5C718E; }
+    .actions-container button:hover {
+      cursor: pointer; }
+    .actions-container button:active {
+      background: #1F1E24; }
+
+.next-day {
+  background: #F1EBED;
+  margin: 0 auto 1rem auto;
+  width: 50%; }
+  .next-day:hover {
+    cursor: pointer; }
+  .next-day:active {
+    background: #1F1E24; }
+
+/*# sourceMappingURL=main.css.map */

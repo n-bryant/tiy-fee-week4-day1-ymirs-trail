@@ -1,0 +1,104 @@
+.vis-container {
+  justify-content: space-between;
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  border: 2px solid $water;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  width: 33%;
+
+  &.wagon {
+    animation: right 2s ease;
+  }
+  &.monster {
+    animation: left 2s ease;
+  }
+}
+
+.wagon {
+  background: url(../images/wagon.jpg)
+                    $water;
+  background-blend-mode: overlay;
+  background-size: cover;
+
+  &.chase {
+    width: 50%;
+    transform: translateX(50%);
+    transition: all 1s ease;
+  }
+}
+
+.wagon-info {
+  div {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.start {
+  animation: up 2s ease;
+  background: $stone;
+  border: 4px double $water;
+  border-radius: 25px;
+  height: 4rem;
+  transform: translateY(75%);
+
+  &.vanish {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    background: $midnight;
+  }
+}
+
+.monster {
+  opacity: 1;
+
+  &.chase {
+    opacity: 0;
+    transform: translateX(150%);
+    transition: all 1s ease;
+  }
+}
+
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(250%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes left {
+  0% {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  100% {
+    opacity: 1;
+  }
+}

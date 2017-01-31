@@ -1,0 +1,20 @@
+body {
+  background: $midnight;
+
+  header {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+.day {
+  margin-top: .5rem;
+}
+
+main {
+  background-image: url(../images/mountain-vista.jpg);
+  background-size: cover;
+  border: 4px double $water;
+  margin: 0 auto;
+  width: 85%;
+}
