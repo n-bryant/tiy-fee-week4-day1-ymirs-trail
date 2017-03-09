@@ -41,6 +41,7 @@
 
     &.is-active {
       display: block;
+      overflow: scroll;
     }
   }
 }

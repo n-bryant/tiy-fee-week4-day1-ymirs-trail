@@ -112,6 +112,7 @@ main {
   background-size: cover;
   border: 4px double #5C718E;
   margin: 0 auto;
+  min-height: 220px;
   width: 85%; }
 
 .vis-container {
@@ -145,7 +146,8 @@ main {
 .wagon-info div {
   display: none; }
   .wagon-info div.is-active {
-    display: block; }
+    display: block;
+    overflow: scroll; }
 
 .start {
   animation: up 2s ease;
@@ -203,6 +205,7 @@ main {
   background: rgba(136, 147, 167, 0.75);
   height: 450px;
   margin-top: 1rem;
+  min-width: 250px;
   width: 50%; }
   .party-info .party {
     margin: 1rem auto .5rem auto;
@@ -231,7 +234,8 @@ main {
   position: absolute;
   transform: translateX(-50%); }
   .actions-container button {
-    background: #5C718E; }
+    background: #5C718E;
+    margin-bottom: .5rem; }
     .actions-container button:hover {
       cursor: pointer; }
     .actions-container button:active {
