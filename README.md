@@ -1,2 +1,4 @@
-# tiy-fee-week4-day1-ymirs-trail
-https://n-bryant.github.io/tiy-fee-week4-day1-ymirs-trail/
+# ymirs-trail
+https://n-bryant.github.io/ymirs-trail_JS/
+
+* Practice with JavaScript classes, inheritance, and DOM manipulation.  Themed as a 'Oregon Trail' like party management system.
